@@ -1,4 +1,5 @@
 
+
 let li = document.createElement('li')
 let span = document.createElement('span')
 const ull = document.getElementById('some')
@@ -14,6 +15,19 @@ fetch(url)
 
 
 
+
+document.querySelector('#get-text').onclick = async () => {
+	try {
+		let response = await fetch(url)
+		if (response.ok) {
+			let data = await response.text()
+			//      console.log(data);
+			document.querySelector('#result').innerHTML = data
+		}
+	} catch (error) {
+		console.log(error)
+	}
+}
 
 document.querySelector('#get-text').onclick = () => {
 	fetch('https://reqres.in/api/users?page=2')
