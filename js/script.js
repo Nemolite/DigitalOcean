@@ -1,4 +1,5 @@
 
+
 fetch('https://reqres.in/api/users?page=2')
 .then(res => res.json())
 .then(json => document.getElementById("test").innerText = JSON.stringify(json))
@@ -7,7 +8,23 @@ fetch('https://reqres.in/api/users?page=2')
 })
 .catch(function(error) {
     console.log('error')
-});
+
+
+let li = document.createElement('li')
+let span = document.createElement('span')
+const ull = document.getElementById('some')
+url = 'https://reqres.in/api/users?page=1'
+fetch(url)
+.then(function(response) {
+       response.text().then(data=>{
+        span.innerHTML = `${data}`
+        ull.appendChild(span)
+    })
+})
+
+
+
+
 
 document.querySelector('#get-text').onclick = async () => {
 	try {
@@ -21,6 +38,7 @@ document.querySelector('#get-text').onclick = async () => {
 		console.log(error)
 	}
 }
+
 document.querySelector('#get-text').onclick = () => {
 	fetch('https://reqres.in/api/users?page=2')
 		.then(response => {
@@ -44,8 +62,8 @@ function append(parent, el) {
 	return parent.appendChild(el)
 }
 
-const ul = document.getElementById('authors')
-const url = 'https://reqres.in/api/users?page=2'
+const ul1 = document.getElementById('authors')
+// const url = 'https://reqres.in/api/users?page=2'
 
 fetch(url)
 	.then(resp => resp.json())
@@ -59,7 +77,7 @@ fetch(url)
 			span.innerHTML = `${authors[index]['first_name']}`
 
 			append(li, span)
-			append(ul, li)
+			append(ul1, li)
 		}
 	})
 
