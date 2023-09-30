@@ -1,5 +1,15 @@
 
 
+fetch('https://reqres.in/api/users?page=2')
+.then(res => res.json())
+.then(json => document.getElementById("test").innerText = JSON.stringify(json))
+.then(function(data) {
+    console.log('ok')
+})
+.catch(function(error) {
+    console.log('error')
+
+
 let li = document.createElement('li')
 let span = document.createElement('span')
 const ull = document.getElementById('some')
