@@ -5,7 +5,8 @@ document.querySelector('#get-text').onclick = async () => {
     let response = await fetch(url);
     if (response.ok) {
       let data = await response.text();
-      console.log(data);
+//      console.log(data);
+      document.querySelector('#result').innerHTML = data;
     }
     }
     catch (error) {
