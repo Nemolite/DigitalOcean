@@ -1,15 +1,57 @@
+
+
+// function createNode(element){
+//   return document.createElement(element)
+// }
+
+
+
+// fetch('https://reqres.in/api/users?page=2')
+// .then(res => res.json())
+// .then(json => document.getElementById("test").innerText = JSON.stringify(json))
+// .then(function(data) {
+//     console.log('ok')
+// })
+// .catch(function(error) {
+//     console.log('error')
+
+
+// let li = document.createElement('li')
+// let span = document.createElement('span')
+// const ull = document.getElementById('some')
+// url = 'https://reqres.in/api/users?page=1'
+// fetch(url)
+// .then(function(response) {
+//        response.text().then(data=>{
+//         span.innerHTML = `${data}`
+//         ull.appendChild(span)
+//     })
+// })
+
+
+
+
+
+// document.querySelector('#get-text').onclick = async () => {
+// 	try {
+// 		let response = await fetch(url)
+// 		if (response.ok) {
+// 			let data = await response.text()
+// 			//      console.log(data);
+// 			document.querySelector('#result').innerHTML = data
+// 		}
+// 	} catch (error) {
+// 		console.log(error)
+// 	}
+// }
+
 // document.querySelector('#get-text').onclick = () => {
 // 	fetch('https://reqres.in/api/users?page=2')
 // 		.then(response => {
 // 			if (response.ok) {
-// 				response.json().then(data => {
+// 				response.text().then(data => {
 // 					// выведем данные в #result
-// 					console.log(typeof data)
-// 					let authors = data['data']
-// 					let out = document.querySelector('#out')
-// 					for (let index = 0; index < authors.length; ++index) {
-// 						out.innerHTML = authors[index]['email']
-// 					}
+// 					document.querySelector('#result').innerHTML = data
 // 				})
 // 			}
 // 		})
@@ -18,9 +60,11 @@
 // 		})
 // }
 
+
 // function createNode(element) {
 // 	return document.createElement(element)
 // }
+
 
 // function append(parent, el) {
 // 	return parent.appendChild(el)
@@ -215,6 +259,37 @@
 // 	j++ // j = j + 1
 // }
 
+
+// function append(parent, el) {
+// 	return parent.appendChild(el)
+// }
+
+
+// const ul = document.getElementById("7");
+// const url = 'https://reqres.in/api/users?page=2';
+
+// fetch(url)
+// .then((resp) => resp.json())
+// .then(function(data) {
+//     let emails = data['data']
+//     return emails.map(function(email) {
+//     let li = createNode('li')
+//     let span = createNode('span')
+//     span.innerHTML = `${email.email} ${email.first_name} ${email.last_name}`
+//     append(li, span)
+//     append(ul, li)
+//   })
+
+
+// })
+// .catch(function(error) {
+//   console.log(error);
+// });
+
+// const ul1 = document.getElementById('authors')
+// const url = 'https://reqres.in/api/users?page=2'
+
+
 // let j = 0
 // do {
 // 	document.write('Hello, World  ', j)
@@ -233,6 +308,7 @@
 // 	console.log(j)
 // 	j = j + 2
 // }
+
 
 // for (let i = 0; i <= 20; i = i + 1) {
 // 	if (i % 2 == 0) {
@@ -435,3 +511,15 @@ arr3.push('[6, 7, 8]')
 for (let i = 0; i < arr3.length; i++) {
 	console.log(arr3[i])
 }
+
+			append(li, span)
+			append(ul1, li)
+		}
+	})
+
+	.catch(function (error) {
+		console.log(error)
+	})
+
+
+
