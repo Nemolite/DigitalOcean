@@ -426,12 +426,186 @@
 // let arr2 = new Number(1, 2, 3, 4)
 // console.log(arr)
 // console.log(arr2)
-let arr3 = ['hello', 2, true, [2, 3, 4, 5]]
+// let arr3 = ['hello', 2, true, [2, 3, 4, 5]]
 
-// console.log(arr3.length)
+// // console.log(arr3.length)
 
-arr3.push('[6, 7, 8]')
+// arr3.push('[6, 7, 8]')
 
-for (let i = 0; i < arr3.length; i++) {
-	console.log(arr3[i])
-}
+// for (let i = 0; i < arr3.length; i++) {
+// 	console.log(arr3[i])
+// }
+
+// let arr = [1, 2, 3, 4, 5]
+
+// function fanc(item) {
+// 	return item + 4
+// }
+
+// let newarr = arr.map(fanc)
+// console.log(newarr)
+
+// function fanc2(item) {
+// 	ret = item > 2
+// 	return ret
+// }
+
+// let newarr2 = arr.filter(fanc2)
+// console.log(newarr2)
+
+// function r(n, m) {
+// 	return n + m
+// }
+// let res = arr.reduce(r)
+// console.log(res)
+
+// arr3 = [11, 2, 33, 4, 53, 6]
+
+// for (let item of arr3) {
+// 	console.log(item)
+// }
+
+// for (let i = 0; i < arr3.length; i++) {
+// 	console.log(arr3[i])
+// }
+
+// let str1 = 'hello,World'
+// console.log(str1[0])
+
+// let newstr = [...str1]
+// for (item of str1) {
+// 	console.log(item)
+// }
+
+// let theBigString = 'Pulp Fiction is an awesome movie!'
+// console.log(theBigString.slice(5, 12))
+
+// let inspirationalQuote = 'That which you can also split apart'
+// let arrstr1 = inspirationalQuote.split(' ')
+// for (item of arrstr1) {
+// 	console.log(item)
+// }
+
+// let ip2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// for (let index = 0; index < ip2.length; index++) {
+// 	console.log(ip2[index])
+// }
+
+// let arr = ['Hello', 2, true, 25, 10000, 'ip']
+// let ind = 0
+// while (ind < arr.length) {
+// 	console.log(arr[ind])
+// 	ind = ind + 1
+// }
+
+// function s(a) {
+// 	console.log(a)
+// }
+
+// let arrt = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// for (let ng = arrt.length - 1; ng >= 0; ng = ng - 1) {
+// 	console.log(arrt[ng])
+// }
+
+// for (let k = 0; k < arrt.length; k++) {
+// 	if (arrt[k] % 2 != 0) {
+// 		s(arrt[k])
+// 	}
+// }
+
+// let sumarr = 0
+// for (let d = 0; d < arrt.length; d++) {
+// 	sumarr = sumarr + arrt[d]
+// }
+// s(sumarr)
+// function s(a) {
+// 	console.log(a)
+// }
+
+// let foo = { a: 'Hello', b: 'Monday' }
+
+// s(foo.a)
+// s(foo['a'])
+
+// const json = '{"result":true, "count":42}';
+// const obj = JSON.parse(json);
+
+// s(obj.count)
+
+// let jsonmain = JSON.stringify(foo)
+
+// s(jsonmain)
+// s(typeof jsonmain )
+
+// const url = 'https://reqres.in/api/users?page=2'
+// fetch(url)
+//     .then(resp => resp.json())
+//  	.then(function (data) {
+//  		s(data)
+//  		s(data.data)
+//  	})
+
+//  	.catch(function (error) {
+//  		s(error)
+//  	})
+// let arrstr = [
+// 	'политехнического',
+// 	'учимся',
+// 	'техникума',
+// 	'Шумерлинского',
+// 	'Минобразования',
+// 	'Чувашии',
+// 	'Мы',
+// ]
+
+// console.log(arrstr)
+
+// let groceries = ['Milk', 'Eggs', 'Frosted Flakes', 'Salami', 'Juice']
+// console.log(groceries[4])
+// console.log(groceries)
+
+// groceries.push('Segey')
+// console.log(groceries)
+
+// groceries.pop()
+// console.log(groceries)
+
+// groceries.unshift('Vushnyakov')
+// console.log(groceries)
+
+// groceries.shift()
+// console.log(groceries)
+
+// groceries[2] = 'new String'
+// console.log(groceries)
+
+// console.log(groceries.indexOf('Salami'))
+
+// let n = groceries.indexOf('Salami')
+// groceries[n] = 'Motor'
+// console.log(groceries)
+
+// let good = ['Mario', 'Luigi', 'Kirby', 'Yoshi']
+// let bad = ['Bowser', 'Koopa Troopa', 'Goomba']
+
+// let goodAndBad = good.concat(bad)
+
+// console.log(goodAndBad)
+
+// let goodAndBad2 = bad.concat(good)
+
+// console.log(goodAndBad2)
+
+// let str1 = arrstr[6]
+// arrstr.pop()
+// arrstr.unshift(str1)
+
+// arrstr.push('в')
+
+// let a2 = arrstr.indexOf('учимся')
+// let a1 = arrstr[a2]
+// arrstr.unshift(a1)
+
+// console.log(arrstr)
