@@ -190,47 +190,85 @@
 // let ret = document.querySelector('#ret')
 // ret.nextElementSibling.innerHTML = 'woqoweroiweoiweioriouwer'
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-	.then(response => response.json())
-	.then(json => console.log(json))
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// 	.then(response => response.json())
+// 	.then(json => console.log(json))
 
-async function getUser() {
-	const response = await fetch('https://jsonplaceholder.typicode.com/users', {
-		method: 'GET',
-		headers: { Accept: 'application/json' },
-	})
-	if (response.ok === true) {
-		const user = await response.json()
-		let tbody = document.querySelector('tbody')
-		for (item of user) {
-			console.log(item)
-			htmltrtd = `<td>${item['name']}</td><td>${item['username']}</td><td>${item['email']}</td>`
-			let tr = document.createElement('tr')
-			tr.innerHTML = htmltrtd
-			tbody.appendChild(tr)
-		}
-	}
-}
-// getUser()
+// async function getUser() {
+// 	const response = await fetch('https://jsonplaceholder.typicode.com/users', {
+// 		method: 'GET',
+// 		headers: { Accept: 'application/json' },
+// 	})
+// 	if (response.ok === true) {
+// 		const user = await response.json()
+// 		let tbody = document.querySelector('tbody')
+// 		for (item of user) {
+// 			console.log(item)
+// 			htmltrtd = `<td>${item['name']}</td><td>${item['username']}</td><td>${item['email']}</td>`
+// 			let tr = document.createElement('tr')
+// 			tr.innerHTML = htmltrtd
+// 			tbody.appendChild(tr)
+// 		}
+// 	}
+// }
+// // getUser()
 
-async function getUserFast() {
-	const response = await fetch('http://127.0.0.1:8000/db', {
-		method: 'GET',
-		headers: {
-			Accept: 'application/json',
-		},
-	})
-	if (response.ok === true) {
-		const user = await response.json()
-		console.log(user)
-		let tbody = document.querySelector('tbody')
-		for (item of user) {
-			console.log(item)
-			htmltrtd = `<td>${item['age']}</td><td>${item['name']}</td><td>${item['id']}</td>`
-			let tr = document.createElement('tr')
-			tr.innerHTML = htmltrtd
-			tbody.appendChild(tr)
-		}
-	}
+// async function getUserFast() {
+// 	const response = await fetch('http://127.0.0.1:8000/db', {
+// 		method: 'GET',
+// 		headers: {
+// 			Accept: 'application/json',
+// 		},
+// 	})
+// 	if (response.ok === true) {
+// 		const user = await response.json()
+// 		console.log(user)
+// 		let tbody = document.querySelector('tbody')
+// 		for (item of user) {
+// 			console.log(item)
+// 			htmltrtd = `<td>${item['age']}</td><td>${item['name']}</td><td>${item['id']}</td>`
+// 			let tr = document.createElement('tr')
+// 			tr.innerHTML = htmltrtd
+// 			tbody.appendChild(tr)
+// 		}
+// 	}
+// }
+// getUserFast()
+
+const body = document.querySelector('body')
+console.log(body)
+// let body1 = document.body
+// console.log(body1)
+
+const p = document.createElement('p')
+p.textContent = 'Я теперь внутри DOM-дерева'
+p.style.color = 'red'
+p.style.fontSize = '20px'
+p.classList.add('mycontent')
+p.setAttribute('id', 'myp')
+console.log(p)
+
+body.appendChild(p)
+
+const newp = document.querySelector('#myp')
+const h2 = document.createElement('h2')
+h2.innerHTML = 'Заголовок'
+
+body.insertBefore(h2, p)
+
+const h3 = document.createElement('h3')
+h3.innerHTML = 'Новости'
+
+body.insertAdjacentElement('beforeend', h3)
+/**
+ * Функция добавления нового элемента на страницу
+ *
+ */
+function insertAfter(target, newElement) {
+	target.parentNode.insertBefore(newElement, target)
 }
-getUserFast()
+
+const div = document.createElement('div')
+div.setAttribute('class', 'block')
+
+insertAfter(body, div)
